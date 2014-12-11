@@ -74,6 +74,9 @@ public class Diagnostic extends CordovaPlugin {
         if (action.equals("switchToLocationSettings")){
             switchToLocationSettings();
             callbackContext.success();
+		} else if (action.equals("switchToNetworkSettings")) {
+			switchToNetworkSettings();
+			callbackContext.success();
         } else if(action.equals("isLocationEnabled") || action.equals("isLocationAuthorized") || action.equals("isLocationEnabledSetting")) {
             // r.put("success", isGpsEnabled());
             // r.put("success", isGpsEnabled() || isNetworkEnabled());
@@ -128,6 +131,12 @@ public class Diagnostic extends CordovaPlugin {
         Intent settingsIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
         cordova.getActivity().startActivity(settingsIntent);
     }
+	
+	public void switchToNetworkSettings() {
+		Log.d(TAG, "Switch to Network Settings");
+        Intent settingsNetworkIntent = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
+        cordova.getActivity().startActivity(settingsNetworkIntent);
+	}
 
     private boolean isLocationProviderEnabled(String provider) {
         LocationManager locationManager = (LocationManager) this.cordova.getActivity().getSystemService(Context.LOCATION_SERVICE);
