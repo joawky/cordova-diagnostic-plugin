@@ -133,9 +133,9 @@ public class Diagnostic extends CordovaPlugin {
     }
 	
 	public void switchToSettings() {
-		Log.d(TAG, "Switch to Network Settings");
-        Intent settingsNetworkIntent = new Intent(Settings.ACTION_SETTINGS);
-        cordova.getActivity().startActivity(settingsNetworkIntent);
+		Log.d(TAG, "Switch to Settings");
+        Intent settingsIntent = new Intent(Settings.ACTION_SETTINGS);
+        cordova.getActivity().startActivity(settingsIntent);
 	}
 
     private boolean isLocationProviderEnabled(String provider) {
