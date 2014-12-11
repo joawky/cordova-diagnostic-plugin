@@ -51,6 +51,14 @@ Diagnostic.prototype.switchToLocationSettings = function() {
 						[]);
 };
 
+Diagnostic.prototype.switchToNetworkSettings = function() {
+	return cordova.exec(null,
+						null,
+						'Diagnostic',
+						'switchToNetworkSettings',
+						[]);
+};
+
 
 /**
  * Checks if the application is authorized to use location.
