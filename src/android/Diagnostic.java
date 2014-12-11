@@ -134,7 +134,7 @@ public class Diagnostic extends CordovaPlugin {
 	
 	public void switchToNetworkSettings() {
 		Log.d(TAG, "Switch to Network Settings");
-        Intent settingsNetworkIntent = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
+        Intent settingsNetworkIntent = new Intent(Settings.ACTION_NETWORK_OPERATOR_SETTINGS);
         cordova.getActivity().startActivity(settingsNetworkIntent);
 	}
 
