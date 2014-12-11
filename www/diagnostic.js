@@ -51,11 +51,11 @@ Diagnostic.prototype.switchToLocationSettings = function() {
 						[]);
 };
 
-Diagnostic.prototype.switchToNetworkSettings = function() {
+Diagnostic.prototype.switchToSettings = function() {
 	return cordova.exec(null,
 						null,
 						'Diagnostic',
-						'switchToNetworkSettings',
+						'switchToSettings',
 						[]);
 };
 
