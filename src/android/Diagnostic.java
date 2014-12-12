@@ -74,7 +74,7 @@ public class Diagnostic extends CordovaPlugin {
         if (action.equals("switchToLocationSettings")){
             switchToLocationSettings();
             callbackContext.success();
-		} else if (action.equals("switchToNetworkSettings")) {
+		} else if (action.equals("switchToSettings")) {
 			switchToSettings();
 			callbackContext.success();
         } else if(action.equals("isLocationEnabled") || action.equals("isLocationAuthorized") || action.equals("isLocationEnabledSetting")) {
